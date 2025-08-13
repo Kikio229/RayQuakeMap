@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Raylib-cs" Version="7.0.1" />
+    <PackageReference Include="Sledge.Formats.Map" Version="1.2.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="../Content/Maps/**" CopyToOutputDirectory="PreserveNewest" Link="Content/Maps/%(Filename)%(Extension)" />
+    <Content Include="../Content/Textures/**" CopyToOutputDirectory="PreserveNewest" Link="Content/Textures/%(Filename)%(Extension)" />
+  </ItemGroup>
+
+</Project>
